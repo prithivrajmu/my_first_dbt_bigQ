@@ -5,7 +5,7 @@
     This will override configurations stated in dbt_project.yml
 
     Try changing "table" to "view" below
-*/
+
 
 {{ config(materialized='table') }}
 
@@ -24,4 +24,6 @@ from source_data
     Uncomment the line below to remove records with null `id` values
 */
 
--- where id is not null
+-- where id is not null*/
+
+select * from `dbt-tutorial.jaffle_shop.customers`
